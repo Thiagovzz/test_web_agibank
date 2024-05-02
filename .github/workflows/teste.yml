@@ -16,8 +16,6 @@ jobs:
         - name: Install pip dependencies
           run: |
             pip install --upgrade pip
-        - name: Robot Framework
-          uses: tarathep/robotframework-github-action@v1.0
           with:
             image: kietara/robot-framework
             image_version: 1.0
