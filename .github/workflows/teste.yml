@@ -31,5 +31,6 @@ jobs:
         - name: Publish test results
           uses: actions/upload-artifact@v2
           with:
-            name: robot-test-results
-            path: results
+            image_version: 1.0
+            tests_dir: '${{ github.workspace }}/tests/robot'
+            reports_dir: '${{ github.workspace }}/tests/robot/reports'
