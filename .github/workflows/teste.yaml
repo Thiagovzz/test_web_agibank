@@ -1,5 +1,4 @@
 name: Robot Framework CI
-
 on:
   push:
     branches:
