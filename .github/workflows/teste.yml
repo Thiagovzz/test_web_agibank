@@ -1,11 +1,13 @@
 On:
   push:
     branches:
+      - main
       - pipeline
   pull_request:
+      - main
       - pipeline
   schedule:
-    - cron: '0 9, 11, 15, 18 * * 1,2,3,4,5'
+    - cron: "0 2 * * 1-5"
   workflow_dispatch:
 
 jobs:
