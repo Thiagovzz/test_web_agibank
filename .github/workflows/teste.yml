@@ -16,7 +16,7 @@ jobs:
         - name: Install pip dependencies
           run: |
             pip install --upgrade pip
-            pip install --update
+            pip install --update pip
         - name: Run Test
           run: python -m robot --outputdir results testcases/functional_tests
         - name: Run Test and create report
