@@ -5,7 +5,7 @@ on:
     branches:
       - pipeline
   pull_request:
-        pipeline
+      - pipeline
   schedule:
     - cron: '0 9, 11, 15, 18 * * 1,2,3,4,5'
 
