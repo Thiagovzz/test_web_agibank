@@ -6,10 +6,10 @@ on:
     branches: [pipeline]
   schedule:
     - cron: "0 2 * * 1-5"
-    
+
   jobs:
-    Run-Test:
-      runs-on: ubuntu-22.04
+  Run-Test:
+      runs-on: ubuntu-20.04
       steps:
         - name: Checkout repository
           uses: actions/checkout@v1
