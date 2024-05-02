@@ -5,19 +5,18 @@ on:
     branches:
       - pipeline
   pull_request:
-      - pipeline
-  schedule:
-    - cron: '0 9, 11, 15, 18 * * 1,2,3,4,5'
+  workflow_dispatch:
 
-jobs:
-    Run-Test:
-      runs-on: ubuntu-20.04
-      steps:
-        - name: Checkout repository
-          uses: actions/checkout@v1
-        - name: Install pip dependencies
-          run: |
-            pip install --upgrade pip
-      
-
-
+  jobs:
+      Run-Test:
+        runs-on: ubuntu-20.04
+        steps:
+          - name: Checkout repository
+            uses: actions/checkout@v1
+          - name: Install pip dependencies
+            run: |
+              pip install --upgrade pip
+          - name: Run Test
+            run: python -m robot --outputdir results testes/MeusResultados
+          - name: Run Test and create report
+            run: robot -d reports -x junit-report.xml "testes/MeusResultados"
