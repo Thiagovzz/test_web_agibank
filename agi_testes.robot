@@ -32,6 +32,3 @@ Então realizo a validação de opção de inscrição
   Dado que acessei o Blog da Agi
   Quando o Blog for apresentado
   Então realizo a validação de opção de inscrição
-
-
-

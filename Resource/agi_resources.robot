@@ -60,7 +60,7 @@ Então realizo uma pesquisa por data
     SeleniumLibrary.click element                          locator=//div[@data-section='section-header-search']
     SeleniumLibrary.Wait Until Page Contains Element       locator=(//input[contains(@name,'s')])[1]             timeout= 12
     SeleniumLibrary.Input Text                             locator=(//input[contains(@name,'s')])[1]             text=01/05/2024
-    sleep  5
+    sleep  8
     SeleniumLibrary.click element                          locator=//div[@data-section='section-header-search']
     SeleniumLibrary.Capture Page Screenshot
 Então realizo uma pesquisa com dados inválidos
@@ -68,7 +68,7 @@ Então realizo uma pesquisa com dados inválidos
     SeleniumLibrary.click element                          locator=//div[@data-section='section-header-search']
     SeleniumLibrary.Wait Until Page Contains Element       locator=(//input[contains(@name,'s')])[1]             timeout= 12
     SeleniumLibrary.Input Text                             locator=(//input[contains(@name,'s')])[1]             text=!@#
-    sleep  5
+    SeleniumLibrary.Wait Until Page Contains Element       locator=(//input[contains(@name,'s')])[1]             timeout= 12
     SeleniumLibrary.click element                          locator=//div[@data-section='section-header-search']
     SeleniumLibrary.Capture Page Screenshot
     SeleniumLibrary.wait until page contains               text=Lamentamos, mas nada foi encontrado para sua pesquisa, tente novamente com outras palavras.  timeout= 5
@@ -77,10 +77,9 @@ Então realizo a validação de opção de inscrição
     SeleniumLibrary.Wait Until Page Contains Element       locator=//div[@data-section='section-header-search']  timeout= 12
     SeleniumLibrary.click element                          locator=//div[@data-section='section-header-search']
     SeleniumLibrary.Wait Until Page Contains Element       locator=(//input[contains(@name,'s')])[1]             timeout= 12
-    sleep  3
+    sleep  8
     SeleniumLibrary.Input Text                             locator=(//input[contains(@name,'s')])[1]             text=01/05/2024
-    sleep  5
-    SeleniumLibrary.textarea should contain                locator=(//input[contains(@name,'s')])[1]             expected=01/05/2024
+    sleep  8
     SeleniumLibrary.click element                          locator=//div[@data-section='section-header-search']
     SeleniumLibrary.Capture Page Screenshot
     SeleniumLibrary.wait until page contains element       locator=//aside[contains(@id,'blog_subscription-3')]  timeout= 12

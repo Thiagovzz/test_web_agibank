@@ -17,9 +17,9 @@ jobs:
           run: |
             pip install --upgrade pip
         - name: Run Test
-          run: python -m robot --outputdir results
+          run: python -m robot --outputdir results testes/MeusResultados
         - name: Run Test and create report
-          run: python -m robot -d reports -x junit-report.xml
+          run: python -m robot -d reports -x junit-report.xml "testes/MeusResultados"
         - name: Run Robot Framework tests and generate report
           run: |
              echo "ROBOT_RC=$?" >> "$GITHUB_ENV"  
