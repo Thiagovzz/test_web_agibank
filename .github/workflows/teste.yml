@@ -2,10 +2,10 @@ on:
   push:
     branches:
       - main
-      - pipeline
+      - origin pipeline
   pull_request:
       - main
-      - pipeline
+      - origin pipeline
   schedule:
     - cron: "0 2 * * 1-5"
   workflow_dispatch:
