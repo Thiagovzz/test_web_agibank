@@ -17,6 +17,6 @@ jobs:
           run: |
             pip install --upgrade pip
         - name: Run Test
-          run: python -m robot --outputdir results testes/MeusResultados
+          run: python3 -m robot --outputdir results testes/MeusResultados
         - name: Run Test and create report
-          run: python -m robot -d reports -x junit-report.xml "testes/MeusResultados"
+          run: python3 -m robot -d reports -x junit-report.xml "testes/MeusResultados"
