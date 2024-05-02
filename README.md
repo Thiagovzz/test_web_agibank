@@ -17,6 +17,7 @@ Técnologia escolhida para a realização do teste.
 
         Optei pela linguagem Robotframework, pois tenho um certo domínio na linguagem, a mesma têm uma curva de aprendizagem
         curta e com resultados satisfátorios, tornando simples o seu desenvolvimento podendo envolver os demais menbros do time.
+        Para saber mais sobre o robotframework: https://robotframework.org/
 
 -----------------------------------------------------------------------------------------------------------------------
 
