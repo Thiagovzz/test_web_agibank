@@ -1,39 +1,20 @@
-on:
-    push:
-      branches:
-        - main
-        - origin pipeline
-    pull_request:
-        - main
-        - origin pipeline
-    schedule:
-      - cron: "0 2 * * 1-5"
-    workflow_dispatch:
 
-    jobs:
-      Run-Test:
-        runs-on: ubuntu-22.04
-        steps:
-          - name: Checkout repository
-            uses: actions/checkout@v1
-          - uses: actions/cache@v2
-            id: cache
-            with:
-              path: ~/.cache/pip
-              key: ${{ runner.os }}-pip-${{ hashFiles('**/requirement.txt') }}
-          - name: Install pip dependencies
-            run: |
-              pip install --upgrade pip
-              pip install -r requirement.txt
-          - name: Run Test
-            run: python -m robot --outputdir results testcases/functional_tests
-          - name: Run Test and create report
-            run: python -m robot -d reports -x junit-report.xml "testcases/functional_tests"
-          - name: Run Robot Framework tests and generate report
-            run: |
-              echo "ROBOT_RC=$?" >> "$GITHUB_ENV"
-          - name: Publish test results
-            uses: actions/upload-artifact@v2
-            with:
-              name: robot-test-results
-              path: results
+on:
+  push:
+    branches: [pipeline]
+  pull_request:
+    branches: [pipeline]
+  schedule:
+    - cron: '0 9, 11, 15, 18 * * 1,2,3,4,5'
+
+  jobs:
+  robot_test:
+    runs-on: ubuntu-latest
+    - name: Robot Framework
+      uses: tarathep/robotframework-github-action@v1.0
+      with:
+        image: kietara/robot-framework
+        image_version: 1.0
+        tests_dir: '${{ github.workspace }}/tests/robot'
+        reports_dir: '${{ github.workspace }}/tests/robot/reports'
+
