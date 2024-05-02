@@ -1,15 +1,15 @@
+name: Robot Framework CI
 
 on:
   push:
-    branches: [pipeline]
+    branches:
+      - pipeline
   pull_request:
-    branches: [pipeline]
-  schedule:
-    - cron: "0 2 * * 1-5"
+  workflow_dispatch:
 
-  jobs:
+jobs:
     Run-Test:
-      runs-on: ubuntu-latest
+      runs-on: ubuntu-20.04
       steps:
         - name: Checkout repository
           uses: actions/checkout@v1
@@ -28,11 +28,14 @@ on:
           run: python -m robot -d reports -x junit-report.xml "testcases/functional_tests"
         - name: Run Robot Framework tests and generate report
           run: |
-            echo "ROBOT_RC=$?" >> "$GITHUB_ENV"
+             echo "ROBOT_RC=$?" >> "$GITHUB_ENV"  
+        # - name: If Auto Test Pass Rate Not 100%, Job Will Fail
+        #   if: env.ROBOT_RC != '0'
+        #   run: |
+        #     echo "Auto Test Pass Rate Not 100%, Please Check Test Result"
+        #     exit 1
         - name: Publish test results
           uses: actions/upload-artifact@v2
           with:
             name: robot-test-results
             path: results
-
-
