@@ -10,7 +10,7 @@ on:
     - cron: "0 2 * * 1-5"
   workflow_dispatch:
 
-jobs:
+  jobs:
     Run-Test:
       runs-on: ubuntu-22.04
       steps:
