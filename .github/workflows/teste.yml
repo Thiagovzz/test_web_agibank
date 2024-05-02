@@ -1,7 +1,7 @@
-on:
+On:
   push:
     branches:
-      - master
+      - pipeline
   pull_request:
       - pipeline
   schedule:
