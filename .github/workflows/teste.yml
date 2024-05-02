@@ -13,9 +13,9 @@ jobs:
       steps:
         - name: Checkout repository
           uses: actions/checkout@v1
-        - name: Install pip dependencies
+        - name: Install pip3 dependencies
           run: |
-            pip install --upgrade pip
+            pip3 install --upgrade pip
         - name: Run Test
           run: python -m robot --outputdir results testes/MeusResultados
         - name: Run Test and create report
