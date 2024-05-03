@@ -1,18 +1,9 @@
 name: Execução de testes Agi
-
-on:
-  push:
-    branches: [main]
-  pull_request:
-    branches: [main]
-  schedule:
-    - cron: '0 9, 11, 15, 18 * * 1,2,3,4,5'
+run-name: On Push - web testes run
+on: [push]
 
 jobs:
   robot_test:
-    runs-on: ubuntu-latest
-    - name: Robot Framework
-      uses: tarathep/robotframework-github-action@v1.0
-      with:
-        tests_dir: '${{ github.workspace }}/tests/robot'
-        reports_dir: '${{ github.workspace }}/tests/robot/reports'
+    runs-on: ubuntu-20.04
+    steps:
+      - run: echo "Hello World!"
