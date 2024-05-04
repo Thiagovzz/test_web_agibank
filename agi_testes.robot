@@ -6,7 +6,6 @@ Resource        Resource/agi_resources.robot
 Test Setup      Abrir Blog
 Test Teardown   Fechar Blog
 
-
 *** Test Cases ***
 Abrir blog do Agi
   Dado que acessei o Blog da Agi
