@@ -1,10 +1,11 @@
 name: Run WEB Tests
-run-name: On Push - WEB Tests Run 
-on: [push]
+
+on: push
 
 jobs:
   web-tests:
     runs-on: ubuntu-20.04
+    
     steps:
       - name: Checkout
       - uses: actions/checkout@v3
