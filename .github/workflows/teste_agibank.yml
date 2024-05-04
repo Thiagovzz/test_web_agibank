@@ -27,4 +27,4 @@ jobs:
       - name: Run RobotFramework WEB Tests
       - run: |
           robot -d ./results -v HEADLESS:true \
-          -v BROWSER:chromium
+          -v BROWSER:chromium agi_testes.robot
