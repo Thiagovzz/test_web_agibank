@@ -21,17 +21,14 @@ Validar o campo pesquisa lado direito
 Validar pesquisa por data
   Dado que acessei o Blog da Agi
   Quando o Blog for apresentado
-  Então realizo uma pesquisa por data
+  Então faço a pesquisa por data
 
 Validar pesquisa com dados inválidos
   Dado que acessei o Blog da Agi
   Quando o Blog for apresentado
-  Então realizo uma pesquisa com dados inválidos
+  Então faço uma pesquisa com dados inválidos
 
 Então realizo a validação de opção de inscrição
   Dado que acessei o Blog da Agi
   Quando o Blog for apresentado
-  Então realizo a validação de opção de inscrição
-
-
-
+  Então faço a validação de, opção de inscrição
