@@ -1,160 +1,167 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.10.12 on linux)" generated="2024-05-03T21:38:01.304636" rpa="false" schemaversion="5">
+<robot generator="Robot 7.0 (Python 3.10.12 on linux)" generated="2024-05-03T22:40:36.594537" rpa="false" schemaversion="5">
 <suite id="s1" name="Agi Testes" source="/home/thiago/teste_agibank/agi_testes.robot">
 <test id="s1-t1" name="Então realizo a validação de opção de inscrição" line="31">
 <kw name="Abrir Blog" owner="agi_resources" type="SETUP">
 <kw name="Abrir Browser" owner="agi_resources">
 <kw name="Get Driver Path With Browser" owner="Mycode">
-<msg time="2024-05-03T21:38:01.412750" level="INFO">====== WebDriver manager ======</msg>
-<msg time="2024-05-03T21:38:01.457280" level="INFO">Get LATEST chromedriver version for google-chrome</msg>
-<msg time="2024-05-03T21:38:04.527738" level="INFO">Get LATEST chromedriver version for google-chrome</msg>
-<msg time="2024-05-03T21:38:07.595132" level="INFO">Driver [/home/thiago/.wdm/drivers/chromedriver/linux64/123.0.6312.122/chromedriver-linux64/chromedriver] found in cache</msg>
-<msg time="2024-05-03T21:38:07.595393" level="INFO">/home/thiago/.wdm/drivers/chromedriver/linux64/123.0.6312.122/chromedriver-linux64/chromedriver</msg>
-<msg time="2024-05-03T21:38:07.595573" level="INFO">${driver_path} = /home/thiago/.wdm/drivers/chromedriver/linux64/123.0.6312.122/chromedriver-linux64/chromedriver</msg>
+<msg time="2024-05-03T22:40:36.713303" level="INFO">====== WebDriver manager ======</msg>
+<msg time="2024-05-03T22:40:36.756330" level="INFO">Get LATEST chromedriver version for google-chrome</msg>
+<msg time="2024-05-03T22:40:39.843260" level="INFO">Get LATEST chromedriver version for google-chrome</msg>
+<msg time="2024-05-03T22:40:42.922316" level="INFO">Driver [/home/thiago/.wdm/drivers/chromedriver/linux64/123.0.6312.122/chromedriver-linux64/chromedriver] found in cache</msg>
+<msg time="2024-05-03T22:40:42.922691" level="INFO">/home/thiago/.wdm/drivers/chromedriver/linux64/123.0.6312.122/chromedriver-linux64/chromedriver</msg>
+<msg time="2024-05-03T22:40:42.922902" level="INFO">${driver_path} = /home/thiago/.wdm/drivers/chromedriver/linux64/123.0.6312.122/chromedriver-linux64/chromedriver</msg>
 <var>${driver_path}</var>
 <arg>chrome</arg>
-<status status="PASS" start="2024-05-03T21:38:01.412553" elapsed="6.183112"/>
+<status status="PASS" start="2024-05-03T22:40:36.713100" elapsed="6.209894"/>
 </kw>
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-05-03T21:38:07.596744" level="INFO">Opening browser 'chrome' to base url 'https://agibank.com.br/'.</msg>
+<msg time="2024-05-03T22:40:42.924133" level="INFO">Opening browser 'chrome' to base url 'https://agibank.com.br/'.</msg>
 <arg>https://agibank.com.br/</arg>
 <arg>chrome</arg>
 <arg>executable_path=${driver_path}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-05-03T21:38:07.596350" elapsed="4.028488"/>
+<status status="PASS" start="2024-05-03T22:40:42.923699" elapsed="4.056143"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-05-03T21:38:11.625280" elapsed="0.102289"/>
+<status status="PASS" start="2024-05-03T22:40:46.980186" elapsed="0.103155"/>
 </kw>
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2024-05-03T21:38:12.092470" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-05-03T22:40:47.464987" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2024-05-03T21:38:11.727869" elapsed="0.364872"/>
+<status status="PASS" start="2024-05-03T22:40:47.083658" elapsed="0.381637"/>
 </kw>
-<status status="PASS" start="2024-05-03T21:38:01.412334" elapsed="10.680559"/>
+<status status="PASS" start="2024-05-03T22:40:36.712870" elapsed="10.752579"/>
 </kw>
-<status status="PASS" start="2024-05-03T21:38:01.411982" elapsed="10.680997"/>
+<status status="PASS" start="2024-05-03T22:40:36.712520" elapsed="10.753012"/>
 </kw>
 <kw name="Dado que acessei o Blog da Agi" owner="agi_resources">
 <kw name="Go To" owner="SeleniumLibrary">
-<msg time="2024-05-03T21:38:12.093691" level="INFO">Opening url 'https://blogdoagi.com.br/'</msg>
+<msg time="2024-05-03T22:40:47.467041" level="INFO">Opening url 'https://blogdoagi.com.br/'</msg>
 <arg>https://blogdoagi.com.br/</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2024-05-03T21:38:12.093532" elapsed="0.666798"/>
+<status status="PASS" start="2024-05-03T22:40:47.466698" elapsed="1.039655"/>
 </kw>
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2024-05-03T21:38:13.009918" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-05-03T22:40:48.777935" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2024-05-03T21:38:12.761044" elapsed="0.249224"/>
+<status status="PASS" start="2024-05-03T22:40:48.506647" elapsed="0.271789"/>
 </kw>
-<status status="PASS" start="2024-05-03T21:38:12.093236" elapsed="0.917206"/>
+<status status="PASS" start="2024-05-03T22:40:47.466030" elapsed="1.312575"/>
 </kw>
 <kw name="Quando o Blog for apresentado" owner="agi_resources">
 <kw name="Wait Until Page Contains" owner="SeleniumLibrary">
 <arg>text=Blog</arg>
 <arg>timeout=5</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" start="2024-05-03T21:38:13.011215" elapsed="0.012835"/>
+<status status="PASS" start="2024-05-03T22:40:48.779485" elapsed="0.012600"/>
 </kw>
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2024-05-03T21:38:13.260019" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-05-03T22:40:49.043290" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2024-05-03T21:38:13.024401" elapsed="0.235915"/>
+<status status="PASS" start="2024-05-03T22:40:48.792398" elapsed="0.251323"/>
 </kw>
-<status status="PASS" start="2024-05-03T21:38:13.010840" elapsed="0.249626"/>
+<status status="PASS" start="2024-05-03T22:40:48.778954" elapsed="0.265044"/>
 </kw>
-<kw name="Então realizo a validação de opção de inscrição" owner="agi_resources">
+<kw name="Então faço a validação de, opção de inscrição" owner="agi_resources">
+<kw name="Clickar na lupa para apresentação da caixa de texto de pesquisa" owner="agi_resources">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-05-03T22:40:49.053085" level="INFO">Current page contains element '//div[@data-section='section-header-search']'.</msg>
+<arg>locator=//div[@data-section='section-header-search']</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-05-03T22:40:49.044995" elapsed="0.008359"/>
+</kw>
 <kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
 <arg>locator=//div[@data-section='section-header-search']</arg>
 <arg>timeout= 12</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2024-05-03T21:38:13.261029" elapsed="0.009095"/>
+<status status="PASS" start="2024-05-03T22:40:49.053583" elapsed="0.018177"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-05-03T21:38:13.270748" level="INFO">Clicking element '//div[@data-section='section-header-search']'.</msg>
+<msg time="2024-05-03T22:40:49.072530" level="INFO">Clicking element '//div[@data-section='section-header-search']'.</msg>
 <arg>locator=//div[@data-section='section-header-search']</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-03T21:38:13.270427" elapsed="0.028822"/>
+<status status="PASS" start="2024-05-03T22:40:49.072121" elapsed="0.026567"/>
 </kw>
 <kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
 <arg>locator=(//input[contains(@name,'s')])[1]</arg>
 <arg>timeout= 12</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2024-05-03T21:38:13.299548" elapsed="0.008014"/>
+<status status="PASS" start="2024-05-03T22:40:49.099034" elapsed="0.009090"/>
 </kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-05-03T21:38:16.308338" level="INFO">Slept 3 seconds.</msg>
-<arg>3</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-05-03T21:38:13.307854" elapsed="3.001047"/>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>locator=//input[contains(@id,'search-field')]</arg>
+<arg>timeout= 12</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-05-03T22:40:49.108429" elapsed="0.007692"/>
+</kw>
+<status status="PASS" start="2024-05-03T22:40:49.044721" elapsed="0.071613"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-05-03T21:38:16.310282" level="INFO">Typing text '01/05/2024' into text field '(//input[contains(@name,'s')])[1]'.</msg>
+<msg time="2024-05-03T22:40:49.116790" level="INFO">Typing text ' 01/05/2024' into text field '(//input[contains(@name,'s')])[1]'.</msg>
 <arg>locator=(//input[contains(@name,'s')])[1]</arg>
-<arg>text=01/05/2024</arg>
+<arg>text= 01/05/2024</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-03T21:38:16.309485" elapsed="0.052100"/>
+<status status="PASS" start="2024-05-03T22:40:49.116512" elapsed="0.070049"/>
 </kw>
+<kw name="Clickar e tirar print na página de retorno da pesquisa" owner="agi_resources">
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-05-03T21:38:21.362618" level="INFO">Slept 5 seconds.</msg>
+<msg time="2024-05-03T22:40:54.187752" level="INFO">Slept 5 seconds.</msg>
 <arg>5</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-05-03T21:38:16.362010" elapsed="5.001192"/>
-</kw>
-<kw name="Textarea Should Contain" owner="SeleniumLibrary">
-<msg time="2024-05-03T21:38:21.694439" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2024-05-03T21:38:21.694726" level="FAIL">Text area with locator '(//input[contains(@name,'s')])[1]' not found.</msg>
-<arg>locator=(//input[contains(@name,'s')])[1]</arg>
-<arg>expected=01/05/2024</arg>
-<doc>Verifies text area ``locator`` contains text ``expected``.</doc>
-<status status="FAIL" start="2024-05-03T21:38:21.363736" elapsed="0.332115">Text area with locator '(//input[contains(@name,'s')])[1]' not found.</status>
+<status status="PASS" start="2024-05-03T22:40:49.187255" elapsed="5.001188"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-03T22:40:54.189684" level="INFO">Clicking element '//div[@data-section='section-header-search']'.</msg>
 <arg>locator=//div[@data-section='section-header-search']</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-05-03T21:38:21.696241" elapsed="0.000164"/>
+<status status="PASS" start="2024-05-03T22:40:54.189000" elapsed="0.054845"/>
 </kw>
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-05-03T22:40:55.767918" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="NOT RUN" start="2024-05-03T21:38:21.696661" elapsed="0.000112"/>
+<status status="PASS" start="2024-05-03T22:40:54.244208" elapsed="1.524144"/>
+</kw>
+<status status="PASS" start="2024-05-03T22:40:49.186905" elapsed="6.581713"/>
 </kw>
 <kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
-<arg>locator=//aside[contains(@id,'blog_subscription-3')]</arg>
+<arg>locator=//input[contains(@id,'subscription-3')]</arg>
 <arg>timeout= 12</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="NOT RUN" start="2024-05-03T21:38:21.696964" elapsed="0.000128"/>
+<status status="PASS" start="2024-05-03T22:40:55.768947" elapsed="0.012039"/>
 </kw>
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-05-03T22:40:55.920815" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-5.png"&gt;&lt;img src="selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="NOT RUN" start="2024-05-03T21:38:21.697289" elapsed="0.000096"/>
+<status status="PASS" start="2024-05-03T22:40:55.781305" elapsed="0.139858"/>
 </kw>
-<status status="FAIL" start="2024-05-03T21:38:13.260737" elapsed="8.436914">Text area with locator '(//input[contains(@name,'s')])[1]' not found.</status>
+<status status="PASS" start="2024-05-03T22:40:49.044326" elapsed="6.877010"/>
 </kw>
 <kw name="Fechar Blog" owner="agi_resources" type="TEARDOWN">
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2024-05-03T21:38:21.992505" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-5.png"&gt;&lt;img src="selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-05-03T22:40:56.063212" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-6.png"&gt;&lt;img src="selenium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2024-05-03T21:38:21.698521" elapsed="0.294251"/>
+<status status="PASS" start="2024-05-03T22:40:55.922261" elapsed="0.141372"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-05-03T21:38:21.992990" elapsed="0.063212"/>
+<status status="PASS" start="2024-05-03T22:40:56.064028" elapsed="0.065022"/>
 </kw>
-<status status="PASS" start="2024-05-03T21:38:21.698190" elapsed="0.358274"/>
+<status status="PASS" start="2024-05-03T22:40:55.921843" elapsed="0.207495"/>
 </kw>
-<status status="FAIL" start="2024-05-03T21:38:01.411548" elapsed="20.645120">Text area with locator '(//input[contains(@name,'s')])[1]' not found.</status>
+<status status="PASS" start="2024-05-03T22:40:36.712067" elapsed="19.417514"/>
 </test>
-<status status="FAIL" start="2024-05-03T21:38:01.306745" elapsed="20.750974"/>
+<status status="PASS" start="2024-05-03T22:40:36.596403" elapsed="19.534312"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="Agi Testes">Agi Testes</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Agi Testes">Agi Testes</stat>
 </suite>
 </statistics>
 <errors>
